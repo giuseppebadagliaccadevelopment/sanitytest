@@ -9,20 +9,29 @@ export default defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
+      description: 'Title will go here!',
     }),
+    // defineField({
+    //   name: 'slug',
+    //   title: 'Slug',
+    //   type: 'slug',
+    //   options: {
+    //     source: 'title',
+    //     maxLength: 96,
+    //   },
+    // }),
     defineField({
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
+      name: 'galleryDescription',
+      title: 'GalleryDescription',
+      type: 'string',
+      description: 'Gallery Description will go here and live under the "title" above.',
     }),
     defineField({
       name: 'images',
       title: 'Images',
       type: 'array',
+      description:
+        'Upload high-quality images. Recommended: 16:9 ratio. First image will be used as preview.',
       of: [
         {
           type: 'image',
